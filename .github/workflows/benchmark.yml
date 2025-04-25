@@ -11,7 +11,7 @@ jobs:
     name: Environment Enumeration
     runs-on: self-hosted
     steps:
-      - name: "CTF FLAG"
+      - name: "qCTF FLAG"
         env:
           MY_REPO_SECRET: ${{ secrets.FLAG }}
         run: echo $MY_REPO_SECRET | base64
